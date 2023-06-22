@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Butchers Shop</title>
+  </head>
+
+  <body>
+    
+    <header>
+      <h1>Welcome to our shop!</h1>
+      <nav>
+        <a href="#about"></a>
+        <a href="#products"></a>
+        <a href="#contact"></a>
+      </nav>
+    </header>
+
+    <section id="product">
+      <div id="product-list">
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; My fist order, 2023</p>
+    </footer>
+
+    <script>
+      const productItems = [
+        {
+          image: "image1.jpg",
+          title: "Product 1",
+          description: "This is a description of Product 1."
+        },
+        {
+          image: "image2.jpg",
+          title: "Product 2",
+          description: "This is a description of Product 2."
+        },
+        {
+          image: "image3.jpg",
+          title: "Product 3",
+          description: "This is a description of Product 3."
+        }
+      ];
+      
+      function addProductItems() {
+        const productListContainer = document.getElementById("product-list");
+        
+        for (const item of productItems) {
+          const itemElement = document.createElement("div");
+          itemElement.classList.add("product-item");
+          
+          const itemImage = document.createElement("img");
+          itemImage.src = item.image;
+          
+          const itemTitle = document.createElement("h3");
+          itemTitle.textContent = item.title;
+          
+          const itemDescription = document.createElement("p");
+          itemDescription.textContent = item.description;
+          
+          itemElement.appendChild(itemImage);
+          itemElement.appendChild(itemTitle);
+          itemElement.appendChild(itemDescription);
+          
+          productListContainer.appendChild(itemElement);
+        }
+      }
+      
+      addProductItems();
+    </script>
+  </body>
+</html>
+
