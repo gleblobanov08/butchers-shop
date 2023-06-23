@@ -18,13 +18,14 @@ header {
   
 header h1 {
     font-size: 2rem;
+    text-align: center;
     margin: 0;
 }
   
 nav ul {
-    list-style: none;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
+    list-style-type: none;
 }
   
 nav li {
