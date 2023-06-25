@@ -35,11 +35,6 @@ const products = [
         description: "Our spare ribs are meaty and flavorful, great for smoking or grilling. Made from high-quality pork with no added hormones or antibiotics."
     },
     {
-        image: "image8.jpeg",
-        title: "Sausage",
-        description: "Our sausages are made with high-quality meats and natural spices for a delicious and savory flavor. Perfect for breakfast, grilling, or adding to your favorite recipes."
-    },
-    {
         image: "image9.jpeg",
         title: "Leg of Lamb",
         description: "Our leg of lamb is a classic and impressive roast that's perfect for holidays or special occasions. It's tender, juicy, and full of flavor."

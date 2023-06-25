@@ -38,7 +38,6 @@ a {
 }
   
 main {
-    max-width: 800px;
     margin: 2rem auto;
     padding: 0 2rem;
 }
@@ -50,6 +49,7 @@ section {
 h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
   
 ul {
@@ -75,4 +75,12 @@ button[type="submit"] {
     padding: .5rem 1rem;
     border: none;
     border-radius: 3px;
+}
+
+.grid {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 30vw);
+    grid-template-rows: repeat(6, 40vh);
+    grid-gap: 1rem;
 }
