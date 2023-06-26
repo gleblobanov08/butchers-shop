@@ -41,6 +41,14 @@ main {
     margin: 2rem auto;
     padding: 0 2rem;
 }
+
+footer {
+    margin: 20px;
+    background-color: dimgrey;
+    font-style: italic;
+    text-align: center;
+    
+}
   
 section {
     margin-bottom: 2rem;
@@ -52,21 +60,18 @@ h2 {
     text-align: center;
 }
   
-ul {
+main ul {
     list-style: disc;
     padding-left: 1.5rem;
     margin-bottom: 1rem;
 }
-  
-label {
-    display: block;
-    margin-bottom: .5rem;
+
+input {
+    width: 40%;
 }
-  
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: .5rem;
-    margin-bottom: 1rem;
+
+textarea {
+    width: 85%;
 }
   
 button[type="submit"] {
