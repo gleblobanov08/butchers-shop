@@ -21,13 +21,16 @@
     <section>
       <h2>Contact Us</h2>
       <p>Have a question or comment? Fill out the form below and we'll get back to you as soon as possible!</p>
-      <form action="send.php" method="post"><br>
-        <input type="text" id="name" name="name" placeholder="Your name" required><br>
-        <input type="email" id="email" name="email" placeholder="Your email" required><br>
-        <textarea id="message" name="message" placeholder="Type your message here" required></textarea><br>
-        <button type="submit">Submit</button>
+      <form action="send.php" method="post"><br />
+        <div class="center">
+          <input type="text" id="name" name="name" placeholder="Your name" required><br />
+          <input type="email" id="email" name="email" placeholder="Your email" required><br />
+          <textarea name="message" cols="50" rows="10" placeholder="Type your message here" required></textarea><br />
+          <input type="submit" value="Submit">
+      </div>
       </form>
     </section>
   </main>
+</form>
 </body>
 </html>

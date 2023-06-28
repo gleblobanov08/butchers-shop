@@ -43,7 +43,7 @@ main {
 }
 
 footer {
-    margin: 20px;
+    margin: 1rem;
     background-color: dimgrey;
     font-style: italic;
     text-align: center;
@@ -61,25 +61,34 @@ h2 {
 }
   
 main ul {
+    text-align: center;
     list-style: disc;
+    list-style-type: none;
     padding-left: 1.5rem;
     margin-bottom: 1rem;
 }
 
-input {
-    width: 40%;
+ol li {
+    width: 33%;
+    float: left;
 }
 
-textarea {
-    width: 85%;
+input, textarea {
+    width: 60%;
+    margin: .4rem;
+    padding: .5rem;
 }
-  
-button[type="submit"] {
+
+input[type="submit"] {
     background-color: #333;
     color: #fff;
     padding: .5rem 1rem;
-    border: none;
-    border-radius: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
 }
 
 .grid {
