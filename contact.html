@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Butcher Shop - Contact Us</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="contact.js"></script>
 </head>
 <body>
   <header>
@@ -18,19 +19,27 @@
     </nav>
   </header>
   <main>
+    <h2>Contact Us</h2>
     <section>
-      <h2>Contact Us</h2>
-      <p style="text-align: center; font-size: 1.5rem;">Have a question or comment? Fill out the form below and we'll get back to you as soon as possible!</p>
-      <form action="send.php" method="post"><br />
-        <div style="text-align: center;">
-          <input type="text" id="name" name="name" placeholder="Your name" required><br />
-          <input type="email" id="email" name="email" placeholder="Your email" required><br />
-          <textarea name="message" cols="50" rows="10" placeholder="Type your message here" required></textarea><br />
-          <input type="submit" value="Submit">
+      <div class="form">
+        <form action="#" id="form" class="form-body">
+          <h3 class="form-title">Have a question or comment? Then fill the form below and we will reply as soon as possible!</h3>
+          <div class="form-item">
+            <label for="formName" class="form-label">Username:</label>
+            <input id="formName" type="text" name="username" class="form-input _req">
+          </div>
+          <div class="form-item">
+            <label for="formEmail" class="form-label">Email:</label>
+            <input id="formEmail" type="email" name="email" class="form-input _req _email">
+          </div>
+          <div class="form-item">
+            <label for="formMessage" class="form-label">Message:</label>
+            <textarea name="message" id="formMessage" class="form-input _req"></textarea>
+          </div>
+          <button type="submit" class="form-button">Submit</button>
+        </form>
       </div>
-      </form>
     </section>
   </main>
-</form>
 </body>
 </html>
