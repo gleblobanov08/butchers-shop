@@ -6,7 +6,6 @@
 	<title>My Butcher Shop - Products</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" type="image/x-icon" href="media/shop.png">
-	<script src="script.js" defer></script>
 </head>
 <body>
 	<header>
@@ -21,12 +20,21 @@
 	</header>
 	<main>
 		<section>
-			<h2>Our Products</h2>
-			<div id="products" style="text-align: center;" class="grid"></div>
-		</section>
+			<h1>Butcher's Shop</h1>
+  			<ul class="animal-list">
+    			<li class="animal">Beef</li>
+    			<li class="animal">Pork</li>
+    			<li class="animal">Lamb</li>
+    			<li class="animal">Turkey</li>
+    			<li class="animal">Chicken</li>
+		  	</ul>
+
+  			<ul class="product-list" id="products"></ul>
+  		</section>
 	</main>
 	<footer>
 		&copy;My fisrt site, 2023 <br /> All rights resrved
 	</footer>
+  	<script src="script.js" defer></script>
 </body>
 </html>

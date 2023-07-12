@@ -19,7 +19,6 @@ header {
 header h1 {
 	font-size: 2rem;
 	text-align: center;
-	margin: 0;
 }
 
 nav ul {
@@ -162,10 +161,23 @@ textarea.form-input {
 	transform: scale(1.2);
 }
 
-.grid {
-	align-items: center;
-	display: grid;
-	grid-template-columns: repeat(3, 30vw);
-	grid-template-rows: repeat(6, 40vh);
-	grid-gap: 2rem;
+.animal-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
+
+.animal-list li {
+	display: inline-block;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.product-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+.product-list li {
+	margin-bottom: 10px;
+} 

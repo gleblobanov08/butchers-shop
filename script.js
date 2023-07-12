@@ -1,120 +1,57 @@
-const products = [
-	{
-		image: "media/image1.jpeg",
-		title: "Ground Beef",
-		description: "Our freshly ground beef is perfect for making burgers, meatballs, and more. Made with high-quality beef from local farms."
-	},
-	{
-		image: "media/image2.jpeg",
-		title: "Sirloin Steak",
-		description: "Our sirloin steak is cut from the rear back portion of the animal, resulting in a flavorful and tender cut of beef. Great for grilling or pan-searing."
-	},
-	{
-		image: "media/image3.jpeg",
-		title: "Ribeye Steak",
-		description: "The ribeye steak is cut from the rib section of the animal and is known for its marbling and rich flavor. Best cooked over high heat to achieve a crusty, caramelized exterior."
-	},
-	{
-		image: "media/image4.jpeg",
-		title: "Filet Mignon",
-		description: "The filet mignon is a tender and lean cut of beef that's perfect for special occasions. It's often considered the most luxurious cut of beef due to its tenderness and buttery texture."
-	},
-	{
-		image: "media/image5.jpeg",
-		title: "Bacon",
-		description: "Our bacon is thick-cut and made from high-quality pork belly. Perfect for breakfast, sandwiches, or adding to your favorite recipes for a smoky, savory flavor."
-	},
-	{
-		image: "media/image6.jpeg",
-		title: "Pork Chops",
-		description: "Our pork chops are cut from locally-raised pigs and are perfect for grilling or pan-frying. They're juicy, tender, and full of flavor."
-	},
-	{
-		image: "media/image7.jpeg",
-		title: "Spare Ribs",
-		description: "Our spare ribs are meaty and flavorful, great for smoking or grilling. Made from high-quality pork with no added hormones or antibiotics."
-	},
-	{
-		image: "media/image8.jpeg",
-		title: "Leg of Lamb",
-		description: "Our leg of lamb is a classic and impressive roast that's perfect for holidays or special occasions. It's tender, juicy, and full of flavor."
-	},
-	{
-		image: "media/image9.jpeg",
-		title: "Lamb Chops",
-		description: "Our lamb chops are cut from locally-raised lambs and are perfect for grilling or pan-frying. They're juicy, tender, and full of flavor."
-	},
-	{
-		image: "media/image10.jpeg",
-		title: "Ground Lamb",
-		description: "Our ground lamb is perfect for making flavorful and juicy lamb burgers, meatballs, or adding to your favorite recipes for a delicious twist."
-	},
-	{
-		image: "media/image11.jpeg",
-		title: "Whole Chicken",
-		description: "Our whole chickens are free-range and raised without antibiotics or hormones. Perfect for roasting with your favorite herbs and spices."
-	},
-	{
-		image: "media/image12.jpeg",
-		title: "Chicken Breasts",
-		description: "Our chicken breasts are juicy and flavorful, perfect for grilling, sautéing, or baking. Made from free-range chickens raised without antibiotics or hormones."
-	},
-	{
-		image: "media/image13.jpeg",
-		title: "Chicken Thighs",
-		description: "Our chicken thighs are flavorful and juicy, perfect for grilling or baking. Made from free-range chickens raised without antibiotics or hormones."
-	},
-	{
-		image: "media/image14.jpeg",
-		title: "Bütün Hindi",
-		description: "Turkey in Turkey."
-	},
-	{
-		image: "media/image15.jpeg",
-		title: "Turkey Breasts",
-		description: "Our turkey breasts are lean and flavorful, perfect for roasting or grilling. Made from turkeys raised without antibiotics or hormones."
-	},
-	{
-		image: "media/image16.jpeg",
-		title: "Turkey Legs",
-		description: "Our turkey legs are meaty and flavorful, great for smoking or roasting. Made from turkeys raised without antibiotics or hormones."
-	},
-	{
-		image: "media/image17.jpeg",
-		title: "Ham",
-		description: "Our ham is juicy and flavorful, perfect for sandwiches or adding to your favorite recipes. Made from locally-raised pigs with no added hormones or antibiotics."
-	},
-	{
-		image: "media/image18.jpeg",
-		title: "Roast Beef",
-		description: "Our roast beef is tender and flavorful, perfect for adding to sandwiches or serving with your favorite sides. Made from high-quality beef from local farms."
-	}
-];
-
-function addProductItems () {
-	const productSection = document.querySelector("#products");
-
-	for (let i = 0; i < products.length; i++) {
-		const product = products[i];
-
-		const productDiv = document.createElement("div");
-		productDiv.classList.add("product-item");
-
-		const productImage = document.createElement("img");
-		productImage.src = product.image;
-
-		const productHeading = document.createElement("h3");
-		productHeading.textContent = product.title;
-
-		const productDescription = document.createElement("p");
-		productDescription.textContent = product.description;
-
-		productDiv.appendChild(productImage);
-		productDiv.appendChild(productHeading);
-		productDiv.appendChild(productDescription);
-
-		productSection.appendChild(productDiv);
-	}
-}
-
-addProductItems();
+const products = {
+      beef: [
+        { name: "Ground Beef", description: "Ground beef is versatile and can be used for various recipes.", image: "beef1.jpg" },
+        { name: "Sirloin Steak", description: "Sirloin steak is a tender and flavorful cut of beef.", image: "beef2.jpg" },
+        // Add more beef products here...
+      ],
+      pork: [
+        { name: "Ham", description: "Ham is a delicious and popular choice for meals and sandwiches.", image: "pork1.jpg" },
+        { name: "Bacon", description: "Bacon is a tasty and crispy meat that goes well with many dishes.", image: "pork2.jpg" },
+        // Add more pork products here...
+      ],
+      lamb: [
+        { name: "Leg of Lamb", description: "Leg of lamb is a classic roast that is flavorful and tender.", image: "lamb1.jpg" },
+        { name: "Lamb Chops", description: "Lamb chops are small, tender cuts of meat that are quick to cook.", image: "lamb2.jpg" },
+        // Add more lamb products here...
+      ],
+      turkey: [
+        { name: "Whole Turkey", description: "Whole turkey is a popular choice for holiday feasts.", image: "turkey1.jpg" },
+        { name: "Turkey Breasts", description: "Turkey breasts are lean and can be roasted or grilled.", image: "turkey2.jpg" },
+        // Add more turkey products here...
+      ],
+      chicken: [
+        { name: "Whole Chicken", description: "Whole chicken is versatile and can be used in various recipes.", image: "chicken1.jpg" },
+        { name: "Chicken Breasts", description: "Chicken breasts are lean and can be grilled or baked.", image: "chicken2.jpg" },
+        // Add more chicken products here...
+      ],
+    };
+    
+    // Get the animal list elements
+    const animalList = document.querySelectorAll('.animal');
+    
+    // Add click event listener to each animal list item
+    animalList.forEach(animal => {
+      animal.addEventListener('click', () => {
+        const animalName = animal.textContent.toLowerCase();
+        const productList = document.getElementById('products');
+        productList.innerHTML = ""; // Clear existing product list
+        
+        if (products[animalName]) {
+          products[animalName].forEach(product => {
+            const listItem = document.createElement('li');
+            const image = document.createElement('img');
+            image.src = product.image;
+            image.alt = product.name;
+            const name = document.createElement('h3');
+            name.textContent = product.name;
+            const description = document.createElement('p');
+            description.textContent = product.description;
+            
+            listItem.appendChild(image);
+            listItem.appendChild(name);
+            listItem.appendChild(description);
+            productList.appendChild(listItem);
+          });
+        }
+      });
+    });
