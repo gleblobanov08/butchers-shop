@@ -37,6 +37,10 @@ main {
 	padding: 0 2rem;
 }
 
+ul {
+	list-style-type: none;
+}
+
 img {
 	height: 150px;
 	width: 150px;
@@ -161,21 +165,15 @@ textarea.form-input {
 	transform: scale(1.2);
 }
 
-.animal-list {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
+.animal-list, .product-list {
+	display: flex;
+	justify-content: space-around;
 }
 
 .animal-list li {
 	display: inline-block;
-	margin-right: 10px;
+	margin: 0 30px;
 	cursor: pointer;
-}
-
-.product-list {
-	list-style-type: none;
-	padding: 0;
 }
 
 .product-list li {

@@ -26,15 +26,13 @@ const products = {
       ],
     };
     
-    // Get the animal list elements
     const animalList = document.querySelectorAll('.animal');
     
-    // Add click event listener to each animal list item
     animalList.forEach(animal => {
       animal.addEventListener('click', () => {
         const animalName = animal.textContent.toLowerCase();
         const productList = document.getElementById('products');
-        productList.innerHTML = ""; // Clear existing product list
+        productList.innerHTML = "";
         
         if (products[animalName]) {
           products[animalName].forEach(product => {
