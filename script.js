@@ -1,9 +1,4 @@
 const products = {
-      beef: [
-        { name: "Ground Beef", description: "Ground beef is versatile and can be used for various recipes.", image: "beef1.jpg" },
-        { name: "Sirloin Steak", description: "Sirloin steak is a tender and flavorful cut of beef.", image: "beef2.jpg" },
-        // Add more beef products here...
-      ],
       pork: [
         { name: "Ham", description: "Ham is a delicious and popular choice for meals and sandwiches.", image: "pork1.jpg" },
         { name: "Bacon", description: "Bacon is a tasty and crispy meat that goes well with many dishes.", image: "pork2.jpg" },
