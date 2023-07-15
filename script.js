@@ -2,7 +2,7 @@ const products = {
       pork: [
         { name: "Ham", description: "Ham is a delicious and popular choice for meals and sandwiches.", image: "pork1.jpg" },
         { name: "Bacon", description: "Bacon is a tasty and crispy meat that goes well with many dishes.", image: "pork2.jpg" },
-        // Add more pork products here...
+        { name: "Pig Head with Sunglasses on", description: "It's funny, innit?"},
       ],
       lamb: [
         { name: "Leg of Lamb", description: "Leg of lamb is a classic roast that is flavorful and tender.", image: "lamb1.jpg" },
