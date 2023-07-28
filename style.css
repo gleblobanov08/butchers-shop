@@ -1,5 +1,5 @@
+/* basic */
 * {
-	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
@@ -29,15 +29,20 @@ nav {
 	background-color: lightslategrey;
 	color: white;
 }
-nav li {
+nav ul {
+	display: flex;
+	justify-content: space-around;
 	text-align: center;
+}
+nav li {
+	width: 33%;
 }
 nav a {
 	color: #fff;
 	text-decoration: none;
 }
 main {
-	margin: 50px auto 10px;
+	margin: 3rem 0 1rem 0;
 	padding: 0 2rem;
 	text-align: justify;
 }
@@ -51,7 +56,7 @@ footer {
 	font-style: italic;
 	text-align: center;
 }
-section {
+section, article {
 	margin: 2rem;
 }
 h2 {
@@ -60,7 +65,10 @@ h2 {
 	text-align: center;
 }
 
-.team, .crewmate {
+/* main page */
+.team,
+.teammate {
+	padding: 1rem;
 	text-align: center;
 	display: flex;
 	align-content: center;
@@ -68,15 +76,14 @@ h2 {
 	flex-grow: 1;
 }
 
-.crewmate img {
+.teammate img {
 	height: 200px;
 	width: 200px;
 	transition: transform .2s;
 }
-.crewmate img:hover {
+.teammate img:hover {
 	transform: scale(1.2);
 }
-
 li.color-change {
 	text-align: center;
 	list-style: disc;
@@ -86,19 +93,28 @@ li.color-change {
 	font-size: 1.1em;
 	animation: color-change .4s infinite;
 }
- @keyframes color-change {
-	0% { color: red; }
-	50% { color: blue; }
-	100% { color: red; }
+@keyframes color-change {
+	0% {
+		color: red;
+	}
+
+	50% {
+		color: blue;
+	}
+
+	100% {
+		color: red;
+	}
 }
 
+/* product page */
 .container {
 	max-width: 1200px;
 	margin: 0px auto;
 	padding: 0px 15px;
 }
-
-.animal-list, .product-list {
+.animal-list,
+.product-list {
 	width: 100%;
 	padding: 0;
 	margin: 0;
@@ -109,47 +125,67 @@ li.color-change {
 	width: 15%;
 	cursor: pointer;
 }
-
 .product-list li {
 	padding: 20px;
 	display: inline-block;
-	width: 33%;
 }
 .product-list img {
 	height: 150px;
 	width: 151px;
 }
 
+/* adaptive-responsive */
 @media only screen and (min-width: 1024px) {
 	.product-list li {
-	  width: 33%;
+		width: 33%;
 	}
 }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (max-width: 900px) {
+	.team {
+		visibility: hidden;
+	}
+	.teammate {
+		display: block;
+	}
+	.teammate img {
+		width: 80%;
+		height: 80%;
+		margin: 3rem;
+	}
 	.animal-list li {
 		width: 32%;
 		padding: 10px;
 	}
+
 	.product-list li {
-	  width: 96%;
-	  margin: 2%;
+		width: 96%;
+		margin: 2%;
 	}
+
 	.product-list img {
 		width: 80%;
 		height: 80%;
 		margin: 30px;
 	}
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
 	.animal-list li {
 		width: 48%;
 		padding: 10px;
 	}
+
 	.product-list li {
-	  width: 100%;
+		width: 100%;
+	}
+
+	.product-list img {
+		width: 80%;
+		height: 80%;
+		margin: 30px;
 	}
 }
 
+/* contact us */
 .form {
 	max-width: 750px;
 	margin: 0 auto;
