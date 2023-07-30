@@ -61,17 +61,17 @@ $maxWidthContainer: 1170;
 		padding: 10px;
 	}
 
-	.product-list li {
-		width: 100%;
-	}
-
-	.product-list img {
-		width: 80%;
-		height: 80%;
-		margin: 30px;
+	.product-list {
+		li {
+			width: 100%;
+		}
+		img {
+			width: 80%;
+			height: 80%;
+			margin: 30px;
+		}
 	}
 }
-
 /* basic */
 * {
 	margin: 0;
@@ -100,6 +100,7 @@ nav {
 	padding: 15px;
 	position: sticky;
 	top: 40px;
+	z-index: 1;
 	background-color: lightslategrey;
 	color: white;
     ul {
@@ -131,8 +132,8 @@ footer {
 	font-style: italic;
 	text-align: center;
 }
-section, article {
-	margin: 2rem;
+main, section, article {
+	margin: 1rem;
 }
 h2 {
 	font-size: 1.4em;
@@ -144,35 +145,67 @@ h2 {
 .employees-row {
 	display: flex;
 	justify-content: space-between;
-    .employee {
-	    position: relative;
-	    width: 30%;
-	    img {
-	        width: 100%;
-	        height: 100%;
-        }
-        .employee-text {
-        	position: absolute;
-        	top: 0;
-        	left: 0;
-        	width: 100%;
-        	height: 100%;
-        	background-color: rgba(0, 0, 0, 0.8);
-        	color: #fff;
-        	text-align: center;
-        	opacity: 0;
-        	visibility: hidden;
-        	transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-    }
-}
-
-.employee:hover .employee-text {
-	opacity: 1;
-	visibility: visible;
-}
+	.employee {
+		position: relative;
+		width: 30%;
+	  img {
+			width: 100%;
+			height: 100%;
+	  }
+	  .employee-text {
+			position: absolute;
+			top: 0;
+		 	left: 0;
+		 	width: 100%;
+		 	height: 100%;
+		 	background-color: rgba(0, 0, 0, 0.8);
+		 	color: #fff;
+		 	opacity: 0;
+			text-align: center;
+		 	visibility: hidden;
+		 	transition: opacity 0.3s ease, visibility 0.3s ease;
+		 	p {
+				margin: 0;
+		 	}
+	  	}
+	  	&:hover .employee-text {
+		 	opacity: 1;
+		 	visibility: visible;
+	  	}
+	}
+ }
  
-li.color-change {
+ @media (max-width: 767px) {
+	.employees-row {
+	  	flex-wrap: wrap;
+		.employee {
+			width: 100%;
+			height: 100%;
+			margin-bottom: 20px;
+			img {
+				display: block;
+				margin: auto;
+				width: 70%;
+				height: 70%;
+			}
+			.employee-text {
+				position: static;
+				display: block;
+				margin: auto;
+				width: 70%;
+				height: auto;
+				opacity: 0;
+				visibility: visible;
+				background-color: rgba(0, 0, 0, 0.8);
+				p {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+ }
+
+.color-change li {
 	text-align: center;
 	list-style: disc;
 	list-style-type: none;
