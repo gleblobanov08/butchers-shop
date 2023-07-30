@@ -17,6 +17,7 @@ $maxWidthContainer: 1170;
 		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
 	}
 }
+
 @keyframes color-change {
 	0% {
 		color: red;
@@ -30,6 +31,47 @@ $maxWidthContainer: 1170;
 		color: red;
 	}
 }
+
+/* adaptive-responsive */
+@media only screen and (min-width: 1024px) {
+	.product-list li {
+		width: 33%;
+	}
+}
+@media (max-width: 900px) {
+	.animal-list li {
+		width: 32%;
+		padding: 10px;
+	}
+
+	.product-list li {
+		width: 96%;
+		margin: 2%;
+	}
+
+	.product-list img {
+		width: 80%;
+		height: 80%;
+		margin: 30px;
+	}
+}
+@media (max-width: 767px) {
+	.animal-list li {
+		width: 48%;
+		padding: 10px;
+	}
+
+	.product-list li {
+		width: 100%;
+	}
+
+	.product-list img {
+		width: 80%;
+		height: 80%;
+		margin: 30px;
+	}
+}
+
 /* basic */
 * {
 	margin: 0;
@@ -146,65 +188,28 @@ li.color-change {
 	margin: 0px auto;
 	@include adaptiv-value("padding", 50, 20, 0);
 }
-.animal-list,
-.product-list {
+.animal-list {
 	width: 100%;
 	padding: 0;
 	margin: 0;
 	text-align: center;
-}
-.animal-list li {
-	display: inline-block;
-	width: 15%;
-	cursor: pointer;
-}
-.product-list li {
-	margin: 1rem auto;
-	display: inline-block;
-}
-.product-list img {
-	height: 150px;
-	width: 151px;
-}
-
-/* adaptive-responsive */
-@media only screen and (min-width: 1024px) {
-	.product-list li {
-		width: 33%;
+	li {
+	    display: inline-block;
+    	width: 15%;
+    	cursor: pointer;
 	}
 }
-@media (max-width: 900px) {
-	.animal-list li {
-		width: 32%;
-		padding: 10px;
-	}
-
-	.product-list li {
-		width: 96%;
-		margin: 2%;
-	}
-
-	.product-list img {
-		width: 80%;
-		height: 80%;
-		margin: 30px;
-	}
-}
-@media (max-width: 767px) {
-	.animal-list li {
-		width: 48%;
-		padding: 10px;
-	}
-
-	.product-list li {
-		width: 100%;
-	}
-
-	.product-list img {
-		width: 80%;
-		height: 80%;
-		margin: 30px;
-	}
+.product-list {
+    width: 100%;
+    text-align: center;
+    li {
+	    margin: 1rem auto;
+    	display: inline-block;
+    }
+    img {
+	    height: 150px;
+	    width: 151px;
+    } 
 }
 
 /* contact us */
@@ -254,12 +259,12 @@ li.color-change {
 		transition: background-color 0.5s ease 0.25s;
 		position: relative;
 		top: 0;
+		&:hover {
+		    background-color: #4f6146;
+		}
+		&:active {
+		    top: 3px;
+	        box-shadow: 0px 2px 0px #161b13;
+		}
 	}
-}
-button:hover {
-	background-color: #4f6146;
-}
-button:active {
-	top: 3px;
-	box-shadow: 0px 2px 0px #161b13;
 }
