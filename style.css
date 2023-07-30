@@ -1,3 +1,14 @@
+@keyframes color-change {
+  0% {
+    color: red;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: red;
+  }
+}
 /* basic */
 * {
   margin: 0;
@@ -32,19 +43,16 @@ nav {
   background-color: lightslategrey;
   color: white;
 }
-
 nav ul {
   display: flex;
   justify-content: space-around;
   align-content: center;
   text-align: center;
 }
-
-nav li {
+nav ul li {
   width: 33%;
 }
-
-nav a {
+nav ul a {
   color: #fff;
   text-decoration: none;
 }
@@ -82,18 +90,15 @@ h2 {
   display: flex;
   justify-content: space-between;
 }
-
-.employee {
+.employees-row .employee {
   position: relative;
   width: 30%;
 }
-
-.employee img {
+.employees-row .employee img {
   width: 100%;
   height: 100%;
 }
-
-.employee-text {
+.employees-row .employee .employee-text {
   position: absolute;
   top: 0;
   left: 0;
@@ -122,20 +127,9 @@ li.color-change {
   animation: color-change 0.4s infinite;
 }
 
-@keyframes color-change {
-  0% {
-    color: red;
-  }
-  50% {
-    color: blue;
-  }
-  100% {
-    color: red;
-  }
-}
 /* product page */
 .container {
-  max-width: 1200px;
+  max-width: 1170;
   margin: 0px auto;
   padding: calc(20px + 30 * ((100vw - 320px) / 1600));
 }
@@ -170,7 +164,7 @@ li.color-change {
     width: 33%;
   }
 }
-@media only screen and (max-width: 900px) {
+@media (max-width: 900px) {
   .animal-list li {
     width: 32%;
     padding: 10px;
@@ -207,42 +201,32 @@ li.color-change {
   font-family: "Space Mono", monospace;
   text-align: center;
 }
-
-.form * {
-  outline: none;
-}
-
-h3.form-title {
+.form h3 {
   font-size: 30px;
   font-weight: 600;
   margin: 0px 0px 30px 0px;
 }
-
-.form-item {
+.form .form-item {
   margin: 0px 0px 20px 0px;
 }
-
-label {
+.form .form-item label {
   font-size: 18px;
   display: block;
   margin: 0px 0px 10px 0px;
 }
-
-.form-input {
+.form .form-item .form-input {
   height: 50px;
   padding: 0px 20px;
   border-radius: 5px;
   width: 100%;
   font-size: 18px;
 }
-
-textarea {
+.form .form-item textarea {
   min-height: 120px;
   resize: vertical;
   padding: 20px;
 }
-
-button {
+.form button {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -266,4 +250,5 @@ button:hover {
 button:active {
   top: 3px;
   box-shadow: 0px 2px 0px #161b13;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
