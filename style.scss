@@ -103,7 +103,7 @@ h2 {
 	text-align: center;
 }
 
-/* main page */
+// main
 .employees-row {
 	display: flex;
 	justify-content: space-between;
@@ -147,9 +147,31 @@ h2 {
 	animation: color-change .4s infinite;
 }
 
-.container {
-	max-width: 1180px;
+//products
+.ticker-container {
+	margin: 30px auto;
+	border: 1px solid #000;
+	max-width: 80%;
+	overflow: hidden;
+	.ticker-content {
+		display: flex;
+		width: 250%;
+		white-space: nowrap;
+		animation: ticker 20s linear infinite;
+		p {
+			width: 125%;
+		}
+	}
 }
+@keyframes ticker {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
 .animal-list {
 	width: 100%;
 	padding: 0;
@@ -176,7 +198,7 @@ h2 {
    } 
 }
 
-/* contact us */
+// contact
 .form {
 	max-width: 750px;
 	margin: 0 auto;
@@ -227,6 +249,7 @@ h2 {
 		}
 	}
 }
+//adaptive
 @media only screen and (min-width: 1024px) {
 	.product-list li {
 		width: 33%;

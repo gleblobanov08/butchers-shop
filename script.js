@@ -9,7 +9,7 @@ const products = {
       { name: "Lamb Chops", description: "Lamb chops are small, tender cuts of meat that are quick to cook.", image: "lamb2.jpg" },
 	],
    turkey: [
-      { name: "Whole Turkey", description: "Whole turkey is a popular choice for holiday feasts.", image: "turkey1.jpg" },
+      { name: "Butun Hindi", description: "Turkey in Turkey", image: "media/turkey1.jpg" },
       { name: "Turkey Breasts", description: "Turkey breasts are lean and can be roasted or grilled.", image: "turkey2.jpg" },
    ],
    chicken: [
