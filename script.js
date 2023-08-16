@@ -1,26 +1,70 @@
 const products = {
    pork: [
-   	{ name: "Pork Wings", description: "Just imagine how tasty it is.", image: "media/pork1.jpeg" },
-   	{ name: "Pork Head", description: "Or that's Lord of the flies?", image: "media/pork2.jpeg"},
-		{ name: "Bacon", description: "How it supposed to be.", image: "media/pork3.jpg" }
+   	{ 	
+			name: "Pork Wings", 
+			description: "Just imagine how tasty it is.",
+			image: "https://photos.google.com/album/AF1QipMNZC7TvFNH-bDIpujjOekp8CVCMY9sm5zVNLFn/photo/AF1QipMSznc2YWXWBKvd4pEQmbLUzuXwpt-KXJvB_AOv" 
+		},
+   	{ 
+			name: "Pork Head",
+			description: "Or that's Lord of the flies?",
+			image: "https://photos.google.com/album/AF1QipMNZC7TvFNH-bDIpujjOekp8CVCMY9sm5zVNLFn/photo/AF1QipMH-jul_3k1N78Tf_ezEtpHYvn3sr7lr438leKo"
+		},
+		{
+			name: "Bacon", 
+			description: "How it supposed to be.", 
+			image: "https://photos.google.com/album/AF1QipMNZC7TvFNH-bDIpujjOekp8CVCMY9sm5zVNLFn/photo/AF1QipOnv2ZLodBYCEVozV-NdvX5k0VPf0OHUaNAb47f"
+		}
    ],
    lamb: [
-      { name: "Leg of Lamb", description: "Leg of lamb is a classic roast that is flavorful and tender.", image: "lamb1.jpg" },
-      { name: "Lamb Chops", description: "Lamb chops are small, tender cuts of meat that are quick to cook.", image: "lamb2.jpg" },
+      { 
+			name: "Leg of Lamb", 
+			description: "Leg of lamb is a classic roast that is flavorful and tender.", 
+			image: "lamb1.jpg" 
+		},
+      { 
+			name: "Lamb Chops", 
+			description: "Lamb chops are small, tender cuts of meat that are quick to cook.", 
+			image: "lamb2.jpg" 
+		},
 	],
    turkey: [
-      { name: "Butun Hindi", description: "Turkey in Turkey", image: "media/turkey1.jpg" },
-      { name: "Turkey Breasts", description: "Turkey breasts are lean and can be roasted or grilled.", image: "turkey2.jpg" },
+      {
+			name: "Butun Hindi",
+			description: "Turkey in Turkey", 
+			image: "https://photos.google.com/album/AF1QipMNZC7TvFNH-bDIpujjOekp8CVCMY9sm5zVNLFn/photo/AF1QipN389N-K5_wT2L0uHQeM1j9KQnsb7aG4XRrUsQJ" 
+		},
+      { 
+			name: "Turkey Breasts", 
+			description: "Turkey breasts are lean and can be roasted or grilled.", 
+			image: "turkey2.jpg" 
+		},
    ],
    chicken: [
-      { name: "Whole Chicken", description: "Whole chicken is versatile and can be used in various recipes.", image: "chicken1.jpg" },
-      { name: "Chicken Breasts", description: "Chicken breasts are lean and can be grilled or baked.", image: "chicken2.jpg" },
+      {
+			name: "Whole Chicken", 
+			description: "Whole chicken is versatile and can be used in various recipes.", 
+			image: "chicken1.jpg" 
+		},
+      {
+			name: "Chicken Breasts", 
+			description: "Chicken breasts are lean and can be grilled or baked.", 
+			image: "chicken2.jpg" 
+		},
    ],
 	fish: [
-		{ name: "Fish Sticks", description: "Do you like it? What are you, a gay fish?", image: "media/fish1.jpeg" },
+		{ 
+			name: "Fish Sticks", 
+			description: "Do you like it? What are you, a gay fish?", 
+			image: "https://photos.google.com/album/AF1QipMNZC7TvFNH-bDIpujjOekp8CVCMY9sm5zVNLFn/photo/AF1QipMuhinZs41uHx9Nf4iDZIp7JBz8aPKtboZ6kDwd" 
+		},
 	],
 	other: [
-		{ name: "", description: "", image: "" },
+		{ 
+			name: "", 
+			description: "", 
+			image: "" 
+		},
 	]
 };
     
