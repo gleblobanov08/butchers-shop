@@ -419,52 +419,25 @@ h2, h3 {
 }
 
 .rating {
-  display: flex;
-  align-items: flex-end;
-  font-size: 40px;
-  line-height: 0.75;
+  display: inline-block;
 }
-.rating .rating-body {
-  position: relative;
+
+.rating input[type="radio"] {
+  display: none;
 }
-.rating .rating-body:before {
-  content: "★★★★★";
-  display: block;
+
+.rating label {
+  color: gray;
+  font-size: 24px;
+  cursor: pointer;
 }
-.rating .rating-body .rating-active {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  overflow: hidden;
+
+.rating label:before {
+  content: "\2605"; /* Unicode character for a star */
 }
-.rating .rating-body .rating-active:before {
-  content: "★★★★★";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  color: #ffd300;
-}
-.rating .rating-body .rating-items {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-.rating .rating-body .rating-items .rating-item {
-  flex: 0 0 20%;
-  height: 100%;
-  opacity: 0;
-}
-.rating .rating-value {
-  font-size: 50%;
-  line-height: 1;
-  padding: 0px 0px 0px 10px;
+
+.rating input[type="radio"]:checked ~ label {
+  color: orange;
 }
 
 .popup {
