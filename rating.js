@@ -1,59 +1,11 @@
-"use strict"
+// You can use JavaScript to handle any additional actions you want to take when a star is clicked or selected.
+// For a basic rating system, the CSS handles most of the interactivity.
 
-const ratings = document.querySelectorAll('.rating');
-if (ratings.length > 0) {
-    initRatings();
-}
-
-function initRatings() {
-    let ratingActive, ratingValue;
-
-    for (let index = 0; index < ratings.length; index++) {
-        const rating = ratings[index];
-        initRating(rating);
-    }
-
-    function initRating(rating) {
-        initRatingVars(rating);
-
-        setRatingActiveWidth();
-
-        if (rating.classList.contains('rating-set')) {
-            setRating(rating);
-        }
-    }
-
-    function initRatingVars(rating) {
-        ratingActive = rating.querySelector('.rating-active');
-        ratingValue = rating.querySelector('.rating-value');
-    }
-
-    function setRatingActiveWidth(index = ratingValue.innerHTML) {
-        const ratingActiveWidth = index / 0.05;
-        ratingActive.style.width = `${ratingActiveWidth}%`;
-    }
-
-    function setRating(rating) {
-        const ratingItems = rating.querySelectorAll('.rating-item');
-        for (let index = 0; index < ratingItems.length; index++) {
-            const ratingItem = ratingItems[index];
-            ratingItem.addEventListener("mouseenter", function (e) {
-                initRatingVars(rating);
-                setRatingActiveWidth(ratingItem.value);                
-            });
-            ratingItem.addEventListener("mouseleave", function (e) {
-                setRatingActiveWidth();                
-            });
-            ratingItem.addEventListener("click", function (e) {
-                initRatingVars(rating);
-
-                if (rating.dataset.ajax) {
-                    setRatingValue(ratingItem.value, index);                    
-                } else {
-                    ratingValue.innerHTML = index + 1;
-                    setRatingActiveWidth();
-                }
-            });
-        }
-    }
-}
+// Optionally, you can add an event listener to perform actions when a star is selected:
+const stars = document.querySelectorAll('.rating input[type="radio"]');
+stars.forEach(star => {
+  star.addEventListener('change', () => {
+    // Do something when a star is selected, e.g., send the rating to a server
+    console.log('Selected rating:', star.value);
+  });
+});
