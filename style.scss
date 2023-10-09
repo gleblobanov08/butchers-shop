@@ -25,20 +25,7 @@ $color1: #FFF0E5;
 	}
 }
 
-@keyframes ticker {
-	0% {
-	  transform: translateX(100%);
-	}
-	100% {
-	  transform: translateX(-100%);
-	}
-}
- 
 @media (max-width: 900px) {
-	.animal-list li {
-		width: 32%;
-		padding: 10px;
-	}
 	.product-list {
 		display: block;
 		li {
@@ -79,10 +66,6 @@ $color1: #FFF0E5;
 				}
 			}
 		}
-	}
-	.animal-list li {
-		width: 48%;
-		padding: 10px;
 	}
 	.product-list {
 		li {
@@ -204,7 +187,7 @@ h2, h3 {
 
 .employee-content {
 	background: #333;
-	padding: 50px 0;
+	padding: 20px 0;
 	max-width: 1000px;
 	margin: 20px auto;
 	.tabs-items {
@@ -282,8 +265,11 @@ h2, h3 {
 	margin: 0;
 	text-align: center;
 	li {
-	   display: inline-block;
-    	width: 15%;
+		margin: 1rem 0;
+	    display: block;
+    	width: 100%;
+		text-align: center;
+		list-style-image: url(https://avatars.mds.yandex.net/i?id=75320b3a71bf196db118248d40d2eefc629083d9-10651780-images-thumbs&n=13);
     	cursor: pointer;
 	}
 }
@@ -353,55 +339,6 @@ h2, h3 {
 		   top: 3px;
 	      box-shadow: 0px 2px 0px #161b13;
 		}
-	}
-}
-
-.rating {
-    display: flex;
-    align-items: flex-end;
-    font-size: 40px;
-    line-height: 0.75;
-    .rating-body {
-        position: relative;
-        &:before {
-            content: "★★★★★";
-            display: block;
-        }
-		.rating-active {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			overflow: hidden;
-			&:before {
-				content: "★★★★★";
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				color: #ffd300;	
-			}
-		}
-		.rating-items {
-			display: flex;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			.rating-item {
-				flex: 0 0 20%;
-				height: 100%;
-				opacity: 0;
-			}
-		}
-    }
-	.rating-value {
-		font-size: 50%;
-		line-height: 1;
-		padding: 0px 0px 0px 10px;
 	}
 }
 
