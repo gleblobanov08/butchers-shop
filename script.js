@@ -96,12 +96,11 @@ animalList.forEach(animal => {
    });
 });
 
+var stars = document.querySelectorAll('.stars a');
 
-const rating = document.querySelectorAll('.rating i');
-
-rating.forEach((star, index1) => {
-	star.addEventListener("click", () => {
-		rating.forEach((star, index2) => {
+stars.forEach((item, index1) => {
+	item.addEventListener('click', () => {
+		stars.forEach((star, index2) => {
 			index1 >= index2 ? star.classList.add('active') : star.classList.remove('active');
 		});
 	});

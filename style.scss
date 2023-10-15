@@ -346,4 +346,16 @@ h2, h3 {
 	display: flex;
 	align-content: center;
 	justify-content: center;
+	.stars {
+		display: flex;
+		grid-gap: 20px;
+		a {
+			color: #333;
+			font-size: 40px;
+			transition: 0.6s;
+			.active {
+				color: gold;
+			}
+		}
+	}
 }
